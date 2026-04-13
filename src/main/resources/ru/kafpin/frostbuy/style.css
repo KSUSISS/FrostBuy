@@ -1,0 +1,110 @@
+/* Глобальный фон с глубоким синим градиентом (эффект глубины) */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
+    -fx-font-family: "Segoe UI Semibold", sans-serif;
+}
+
+/* Верхняя панель - делаем её полупрозрачной "стеклянной" */
+.top-panel {
+    -fx-background-color: rgba(13, 27, 42, 0.8);
+    -fx-border-color: #00f2ff;
+    -fx-border-width: 0 0 2 0; /* Тонкая светящаяся линия снизу */
+    -fx-padding: 10 20 10 20;
+}
+
+/* Логотип FrostBuy с сильным неоновым свечением */
+.logo-text {
+    -fx-text-fill: #00f2ff;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #00f2ff, 20, 0.5, 0, 0);
+}
+
+/* Поле поиска - темно-синее с голубой рамкой */
+.text-field {
+    -fx-background-color: #1b263b;
+    -fx-text-fill: white;
+    -fx-border-color: #415a77;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-prompt-text-fill: #778da9;
+}
+.text-field:focused {
+    -fx-border-color: #00f2ff;
+}
+
+/* Список жанров слева - убираем белый фон */
+.list-view {
+    -fx-background-color: rgba(27, 38, 59, 0.5);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(0, 242, 255, 0.3);
+    -fx-border-radius: 10;
+}
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e1dd;
+    -fx-padding: 10;
+}
+.list-view .list-cell:hover {
+    -fx-text-fill: #00f2ff;
+    -fx-background-color: rgba(65, 90, 119, 0.3);
+}
+
+/* Кнопки - ярко-голубые "ледяные" */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #00f2ff, #00b4d8);
+    -fx-text-fill: #0d1b2a;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, #00f2ff, 10, 0.5, 0, 0);
+}
+
+/* Стиль для будущих карточек игр (FlowPane) */
+.game-card {
+    -fx-background-color: rgba(27, 38, 59, 0.7);
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(0, 242, 255, 0.5);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 4, 4);
+}
+
+/* Обычные надписи (Баланс и т.д.) */
+.label {
+    -fx-text-fill: #e0e1dd;
+}
+
+/* Плашка с процентом скидки (в углу картинки) */
+.sale-badge {
+    -fx-background-color: #5c7e10; /* Зеленый Steam или сделай #00f2ff для Frost-стиля */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 2 5 2 5;
+    -fx-background-radius: 3;
+}
+
+/* Старая цена (зачеркнутая) */
+.old-price {
+    -fx-text-fill: #778da9;
+    -fx-font-size: 12px;
+    -fx-strikethrough: true; /* ВОТ ОНО! Делает текст зачеркнутым */
+}
+
+/* Актуальная цена со скидкой */
+.current-price {
+    -fx-text-fill: #a4d007; /* Ярко-салатовый или #00f2ff */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+/* Рамка для блока цен (стиль FrostBuy) */
+.price-container {
+    -fx-background-color: rgba(0, 242, 255, 0.1);
+    -fx-border-color: #00f2ff;
+    -fx-border-width: 1;
+    -fx-padding: 5;
+    -fx-background-radius: 5;
+}
