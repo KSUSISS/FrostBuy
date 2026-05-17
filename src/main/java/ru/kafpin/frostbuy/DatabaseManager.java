@@ -20,7 +20,7 @@ public class DatabaseManager {
 
     private void connect() {
         // УКАЖИ СВОИ ДАННЫЕ ОТ ПОСТГРЕСА ЗДЕСЬ:
-        String url = "jdbc:postgresql://localhost:5432/frostbuy_db";
+        String url = "jdbc:postgresql://localhost:5433/frostbuy";
         String user = "postgres"; // твой логин БД
         String password = "1234";  // твой пароль БД
 

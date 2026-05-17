@@ -12,6 +12,8 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ScrollPane?>
 <BorderPane prefHeight="600.0" prefWidth="1000.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kafpin.frostbuy.MainController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" styleClass="top-panel" BorderPane.alignment="CENTER">
@@ -40,15 +42,11 @@
                      <Button mnemonicParsing="false" styleClass="button" text="Редактировать" />
                      <Button mnemonicParsing="false" styleClass="button" text="Удалить" />
                   </HBox>
-                  <TableView fx:id="gamesTable" prefHeight="450.0" prefWidth="980.0" VBox.vgrow="ALWAYS">
-                     <columns>
-                        <TableColumn text="ID" prefWidth="50" />
-                        <TableColumn text="Название" prefWidth="200" />
-                        <TableColumn text="Жанр" prefWidth="100" />
-                        <TableColumn text="Платформа" prefWidth="100" />
-                        <TableColumn text="Цена" prefWidth="80" />
-                     </columns>
-                  </TableView>
+                  <ScrollPane fitToWidth="true" fitToHeight="true" styleClass="edge-to-edge" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+                     <FlowPane fx:id="gamesFlowPane" hgap="20.0" vgap="20.0" style="-fx-background-color: #1b2838;">
+                        <padding><Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /></padding>
+                     </FlowPane>
+                  </ScrollPane>
                </VBox>
             </Tab>
 
